@@ -21,7 +21,7 @@ This project is a Python script that scrapes keys from the `outlinekeys.com` web
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/DevAdriam/outline-key-scraper.git
+   git clone https://github.com/DevAdriam/Outline-Key-Scraper.git
    cd outline-key-scraper
    ```
 
