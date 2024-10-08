@@ -14,7 +14,8 @@ init(autoreset=True)
 # Suppress SSL warnings
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-OUTLINE_KEY_URL = "https://outlinekeys.com"
+OUTLINE_KEY_URL = "https://outlinekeys.com/?page=2"
+OUTLINE_KEY_DETAIL_URL = "https://outlinekeys.com"
 PLUS_BUTTON_IMG = 'assests/plus_button.jpeg'
 INVALID_KEY_IMG = 'assests/invalid_key.jpeg'
 OUTLINE_CLIENT_PATH ="/Applications/Outline.app/Contents/MacOS/Outline"
@@ -92,7 +93,7 @@ def main():
     for key in key_links:
         href = key.get("href")
         if href:
-            detail_url = OUTLINE_KEY_URL + href
+            detail_url =OUTLINE_KEY_DETAIL_URL + href
             outline_key = fetch_key_detail(detail_url)
 
             if outline_key:
