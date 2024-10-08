@@ -1,5 +1,5 @@
 beautifulsoup4==4.12.2
-requests==2.31.0
-lxml==4.9.3
-urllib3==1.26.16
 colorama==0.4.6
+requests==2.31.0
+urllib3==2.0.4
+pyautogui==0.9.54
