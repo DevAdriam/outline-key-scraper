@@ -12,7 +12,7 @@ import time
 init(autoreset=True)
 
 # Suppress SSL warnings
-# urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 OUTLINE_KEY_URL = "https://outlinekeys.com"
 PLUS_BUTTON_IMG = 'assests/plus_button.jpeg'
@@ -73,11 +73,10 @@ def test_outline_key(outline_key):
         pyautogui.click()
         time.sleep(1)
 
-        invalid_key_location = pyautogui.locateOnScreen(INVALID_KEY_IMG, confidence=0.8)
-        if invalid_key_location:
-                pyautogui.moveTo((center_x / 2), (center_y / 2)+100, duration=0.3)
-                pyautogui.click()
-                time.sleep(1)
+
+        pyautogui.moveTo((center_x / 2), (center_y / 2)+100, duration=0.3)
+        pyautogui.click()
+        time.sleep(1)
 
     else:
         print(f"{Fore.RED}Plus button not found.")
